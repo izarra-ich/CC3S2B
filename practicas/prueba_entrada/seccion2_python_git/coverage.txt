@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/hp/Documentos/Curso/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/hp/Documentos/Curso/Desarrollo de Software/CC3S2B/practicas/prueba_entrada/seccion2_python_git
+plugins: cov-6.3.0
+collecting ... collected 4 items
+
+tests/test_app.py::test_ok PASSED                                        [ 25%]
+tests/test_app.py::test_empty PASSED                                     [ 50%]
+tests/test_app.py::test_non_numeric PASSED                               [ 75%]
+tests/test_app.py::test_specific_error_messages PASSED                   [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.10.12-final-0 _______________
+
+Name         Stmts   Miss  Cover
+--------------------------------
+app/app.py      24      9    62%
+--------------------------------
+TOTAL           24      9    62%
+============================== 4 passed in 0.02s ===============================
