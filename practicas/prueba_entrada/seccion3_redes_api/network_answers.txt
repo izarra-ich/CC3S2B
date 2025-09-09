@@ -1,0 +1,7 @@
+1. curl https://example.com -o example.html
+
+Esto realiza una petición GET al dominio https://example.com y como este devuelve un html como resultado, con -o indicamos que el contenido que obtenemos lo guardemos en un archivo de salida, en este caso exmaple.html
+
+2. dig google.com ANY +noall +answer > dig_output.txt
+
+Esto realiza una consulta a los servidores DNS para el dominio google.com, tendremos como respuesta información sobre el registro del dominio, con la opción ANY indicamos que queremos todos los tipos de registro disponible como son A(ipv4), AAAA(ipv6), TXT, MX(servidor de correo), etc. La opción +noall +answer, filtra la salida para mostrar solo las respuestas de los registros DNS y para finalizar toda la información devuelta lo guardamos en un archivo dig_output.txt
