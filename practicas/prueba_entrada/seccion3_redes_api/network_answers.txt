@@ -1,3 +1,5 @@
+3.1 GET y DNS
+
 1. curl https://example.com -o example.html
 
 Esto realiza una petición GET al dominio https://example.com y como este devuelve un html como resultado, con -o indicamos que el contenido que obtenemos lo guardemos en un archivo de salida, en este caso exmaple.html
@@ -5,3 +7,12 @@ Esto realiza una petición GET al dominio https://example.com y como este devuel
 2. dig google.com ANY +noall +answer > dig_output.txt
 
 Esto realiza una consulta a los servidores DNS para el dominio google.com, tendremos como respuesta información sobre el registro del dominio, con la opción ANY indicamos que queremos todos los tipos de registro disponible como son A(ipv4), AAAA(ipv6), TXT, MX(servidor de correo), etc. La opción +noall +answer, filtra la salida para mostrar solo las respuestas de los registros DNS y para finalizar toda la información devuelta lo guardamos en un archivo dig_output.txt
+
+3.3 Conceptos y pipeline
+
+HTTP(Protocolo de transferencia de hipertexto): Es un protocolo de conexión que implementan ciertas reglas que define como un navegador obtiene recursos y como los servidores responden a peticiones echas por los navegadores.
+
+En cuanto al 80 y 443 son los puertos utilizados por convención para el tráfico en la web, el 80 es para conexión HTTP y el 443 para conexiones HTTPS
+
+El flujo mínimo "código -> pruebas -> despliegue" y una herramienta por paso. 
+En este caso se habla de integración y despliegue continuo (CI/CD) automatiza que sería el flujo que se indica, en el primer flujo sería la entrega continua del código(con nuevas funcionalidades) en la que utilizamos GitHub Actions; para las pruebas se utilizan herramientas de automatización con las que realizamos que todo esté bien, en tal caso empaquetamos el código utilizando por ejemplo Docker, para su posterior despliegue en producción utilizando por ejemplo Kubernetes
